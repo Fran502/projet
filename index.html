@@ -2,7 +2,7 @@
 <html ng-app="fran502" ng-controller="ctrl">
  <head>
   <title>Fran502</title>
-  <link rel="shortcut icon" href="/styling/img/uvic-logo.png"/>
+  <link rel="shortcut icon" type="image/png" href="styling/img/uvic-logo.png"/>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -19,7 +19,7 @@
    <div  class="side-nav" ng-show="model.navVisible">
      <i class="menu-toggle" ng-class= "model.navVisible? 'fa fa-angle-left': 'fa fa-angle-right'" ng-click="nav_toggle()" click-elsewhere= "nav_off()" style="float: right"></i>
      <div id="main-menu">
-      <div id="home-anchor" ng-style="{'opacity': model.navVisible? 1 : 0}"><a href="#!"><img id="menu-logo" src= '/styling/img/martlet.png' ></a></div>
+      <div id="home-anchor" ng-style="{'opacity': model.navVisible? 1 : 0}"><a href="#!"><img id="menu-logo" src= 'styling/img/martlet.png' ></a></div>
       <menu ng-repeat="item in model.apprenants" ng-class="model.navVisible? 'menu-wrapper' : ''">
         <a href="{{item.link}}" ng-show="model.navVisible" class="menu-item">{{item.title}}</a>
       </menu>

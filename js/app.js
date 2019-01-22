@@ -3,28 +3,28 @@ var app = angular.module('fran502', ['ngAnimate', 'ngRoute', 'ui.bootstrap']);
 app.config(function($routeProvider) {
     $routeProvider
     .when("/", {
-        templateUrl : "/views/acceuil.html"
+        templateUrl : "../views/acceuil.html"
     })
     .when("/Catherine", {
-        templateUrl : "/views/catherine.html"
+        templateUrl : "../views/catherine.html"
     })
     .when("/Rachel", {
-        templateUrl : "/views/rachel.html"
+        templateUrl : "../views/rachel.html"
     })
     .when("/Sandra", {
-        templateUrl : "/views/sandra.html"
+        templateUrl : "../views/sandra.html"
     })
     .when("/Ryleigh", {
-        templateUrl : "/views/ryleigh.html"
+        templateUrl : "../views/ryleigh.html"
     })
     .when("/Pamela", {
-        templateUrl : "/views/pamela.html"
+        templateUrl : "../views/pamela.html"
     })
     .when("/Francesca", {
-        templateUrl : "/views/francesca.html"
+        templateUrl : "../views/francesca.html"
     })
     .when("/Anna", {
-        templateUrl : "/views/anna.html"
+        templateUrl : "../views/anna.html"
     })
 
 });
@@ -56,14 +56,6 @@ app.controller('ctrl', function($scope, $window, $uibModal, $location) {
     $scope.model.modalInstance.close();
   }
 
-  $scope.enterAndScroll = function(section) {
-
-    $location.path('/2018/acceuil');
-    $timeout( function(){
-      var someElement = angular.element(document.getElementById(section));
-      $document.duScrollToElementAnimated(someElement);
-    }, 250 );
-  }
 });
 
 
