@@ -1,0 +1,146 @@
+body {
+  font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+  font-size: 20px;
+  color: #333;
+}
+
+.side-nav {
+ width: 300px;
+ height: 100%;
+ position: fixed;
+ z-index: 999;
+ overflow-x: hidden;
+ background: #005493;
+ opacity: 1;
+ text-align: center;
+ -webkit-transition: all cubic-bezier(0.21, 0.65, 1, 1) 0.5s;
+ transition: all cubic-bezier(0.21, 0.65, 1, 1) 0.5s;
+}
+
+.side-nav.ng-hide {
+ width: 40px !important;
+ display: block !important;
+}
+
+
+.menu-toggle {
+ font-size: 35px;
+ z-index: 1000;
+ position: relative;
+ margin-top: 5px;
+ margin-right: 10px;
+ color: #fff !important;
+}
+
+#main-menu {
+  margin-top: 8vh;
+}
+
+.nav-comp {
+  display: inline !important;
+}
+
+.menu-item {
+  -webkit-transition: all linear 0.2s;
+  opacity: 1;
+  white-space: nowrap;
+  margin-left: -60px;
+  display: block;
+  color: #fff !important;
+}
+
+.menu-item:hover {
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.menu-wrapper:hover {
+  background: #F5AA1C;
+}
+
+menu {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  margin: 0;
+}
+
+.menu-item.ng-hide {
+ opacity: 0;
+}
+
+#menu-logo {
+  height: 150px;
+  width: auto;
+}
+
+.modal {
+  text-align: center;
+}
+
+
+@media screen and (min-width: 768px) {
+  .modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+#home-anchor {
+    -webkit-transition: opacity linear 0.2s;
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+}
+
+#home-anchor:hover {
+    transform: scale(1.025);
+}
+
+.title-header {
+  text-align: right;
+}
+
+.titre {
+  font-size: 72px;
+  font-weight: bold;
+  color: #C63527;
+}
+
+.sous-titre {
+  font-size: 30px;
+  font-style: italic;
+  color: #939196;
+  margin-top: -3vh
+}
+.fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    opacity: 1;
+}
+.fade.ng-enter,
+.fade.ng-leave {
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.fade.ng-enter {
+    opacity: 0;
+}
+.fade.ng-enter-active {
+    opacity: 1;
+}
+.fade.ng-leave {
+    opacity: 1;
+}
+.fade.ng-leave-active {
+    opacity: 0;
+}
