@@ -3,7 +3,7 @@ var app = angular.module('fran502', ['ngAnimate', 'ngRoute', 'ui.bootstrap']);
 app.config(function($routeProvider) {
     $routeProvider
     .when("/", {
-        templateUrl : "../views/acceuil.html"
+        templateUrl : "../acceuil.html"
     })
     .when("/Catherine", {
         templateUrl : "../views/catherine.html"
