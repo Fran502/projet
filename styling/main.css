@@ -119,7 +119,7 @@ menu {
   color: #939196;
   margin-top: -3vh
 }
-.fade {
+.fade-anim {
     position: absolute;
     top: 0;
     left: 0;
@@ -127,20 +127,20 @@ menu {
     height: 100%;
     opacity: 1;
 }
-.fade.ng-enter,
-.fade.ng-leave {
+.fade-anim.ng-enter,
+.fade-anim.ng-leave {
     -webkit-transition: all 1s ease;
     transition: all 1s ease;
 }
-.fade.ng-enter {
+.fade-anim.ng-enter {
     opacity: 0;
 }
-.fade.ng-enter-active {
+.fade-anim.ng-enter-active {
     opacity: 1;
 }
-.fade.ng-leave {
+.fade-anim.ng-leave {
     opacity: 1;
 }
-.fade.ng-leave-active {
+.fade-anim.ng-leave-active {
     opacity: 0;
 }
