@@ -149,7 +149,7 @@ font-weight: bold;
 color: #C63527;}
 
 .sandrasous-titre {
-  font-family: Cabin; 
+  font-family: inherit; 
   font-size: 30px;
   font-style: italic;
   color: #939196;
