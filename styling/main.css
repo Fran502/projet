@@ -144,3 +144,6 @@ menu {
 .fade-anim.ng-leave-active {
     opacity: 0;
 }
+.sandratitre {font-family: Cabin; font-size: 72px;
+font-weight: bold;
+color: #C63527;}
