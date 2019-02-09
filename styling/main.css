@@ -145,12 +145,12 @@ menu {
     opacity: 0;
 }
 .sandratitre {
-  font-family: cabin ;
+  font-family: 'Cabin', sans-serif;
   font-size: 72px;font-weight: bold;
   color: #C63527;}
 
 .sandrasous-titre {
-  font-family: cabin ;
+  font-family: 'Cabin', sans-serif;
   font-size: 30px;
   font-style: italic;
   color: #939196;
