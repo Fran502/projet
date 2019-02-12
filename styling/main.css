@@ -164,4 +164,10 @@ menu {
   font-size: 72px;
   color: #000080;}
 
-.pamelamain-content { font-family: 'Open Sans Condensed', sans-serif; }
+.pamelasous-titre {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 36px;
+  color: #ADB1B0;
+}
+
+.pamelamain-content { font-family: 'Raleway', sans-serif; }
