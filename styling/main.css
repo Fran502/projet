@@ -162,7 +162,9 @@ menu {
 .pamelatitre {
   font-family: 'Abril Fatface', cursive;
   font-size: 72px;
-  color: #000080;}
+  color: #893569;
+  margin-top: -3vh
+}
 
 .pamelasous-titre {
   font-family: 'Open Sans Condensed', sans-serif;
