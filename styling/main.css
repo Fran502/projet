@@ -159,11 +159,6 @@ menu {
 
 .sandramain-content { font-family: 'Sarabun', sans-serif }
 
-.sandratooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black; 
-}
 .pamelatitre {
   font-family: 'Abril Fatface', cursive;
   font-size: 72px;
