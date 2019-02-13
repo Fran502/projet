@@ -159,31 +159,6 @@ menu {
 
 .sandramain-content { font-family: 'Sarabun', sans-serif }
 
-.tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
-}
-
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  padding: 5px 0;
-  border-radius: 6px;
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
-
-.tooltip .tooltiptext {
-  width: 120px;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -60px;
-}
-
 .pamelatitre {
   font-family: 'Abril Fatface', cursive;
   font-size: 72px;
