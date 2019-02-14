@@ -174,16 +174,16 @@ menu {
 .pamelamain-content { font-family: 'Raleway', sans-serif; }
 
 .francescatitre {
-  font-family: 'Sarabun', sans-serif;
+  font-family: 'Alegreya Sans', sans-serif;
   font-size: 72px;font-weight: bold;
   color: #000080;}
 
 .francescasous-titre {
-  font-family: 'Sarabun', sans-serif;
+  font-family: 'Alegreya Sans', sans-serif;
   font-size: 30px;
   font-style: italic;
   color: #939196;
   margin-top: -3vh
 }
 
-.francescamain-content { font-family: 'Sarabun', sans-serif }
+.francescamain-content { font-family: 'Alegreya Sans', sans-serif }
