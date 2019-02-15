@@ -173,6 +173,12 @@ menu {
 
 .pamelamain-content { font-family: 'Raleway', sans-serif; }
 
+.rachelmain-content {font-family: 'Lato', sans-serif;}
+.racheltitre {
+  font-family: 'Lato', sans-serif;
+  font-size: 72px;font-weight: bold;
+  color:#4286f4;}
+
 .francescatitre {
   font-family: 'Alegreya Sans', sans-serif;
   font-size: 72px;font-weight: bold;
@@ -187,3 +193,23 @@ menu {
 }
 
 .francescamain-content { font-family: 'Alegreya Sans', sans-serif }
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.Ry_img {
+  border-radius: 8px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  box-shadow: 10px 10px 5px grey;
+}
+
+.Ry_li {
+  margin-left: 5%;
+}
