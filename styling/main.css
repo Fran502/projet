@@ -228,9 +228,8 @@ menu {
 }
 
 blockquote{
-  font-size: 1.4em;
-  width:60%;
-  margin:50px auto;
+  margin-left: 5%;
+  margin-right: 10%;
   font-style:italic;
   color: #555555;
   padding:1.2em 30px 1.2em 75px;
