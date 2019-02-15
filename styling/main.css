@@ -176,7 +176,8 @@ menu {
 .rachelmain-content {font-family: 'Lato', sans-serif;}
 .racheltitre {
   font-family: 'Lato', sans-serif;
-  color:#939196}
+  font-size: 72px;font-weight: bold;
+  color:#939196;}
 
 .francescatitre {
   font-family: 'Alegreya Sans', sans-serif;
