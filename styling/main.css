@@ -147,13 +147,13 @@ menu {
 .sandratitre {
   font-family: 'Sarabun', sans-serif;
   font-size: 72px;font-weight: bold;
-  color: #2E151B;}
+  color: #501B1D;}
 
 .sandrasous-titre {
   font-family: 'Sarabun', sans-serif;
   font-size: 30px;
   font-style: italic;
-  color: #2F4454;
+  color: #2E1114;
   margin-top: -3vh
 }
 
@@ -645,9 +645,9 @@ blockquote span{
   font-style:italic;
   color: #E8E8E8;
   padding:1.2em 30px 1.2em 75px;
-  border-left:8px solid #DA7B93 ;
+  border-left:8px solid #83677B;
   border-radius: 8px;
-  box-shadow: 10px 10px 5px color: #2F4454;
+  box-shadow: 10px 10px 5px color: #ADADAD;
   line-height:1.6;
   position: relative;
   background:#EDEDED;
@@ -655,7 +655,7 @@ blockquote span{
 
 .sandrablockquote::before{
   font-family: 'Sarabun', sans-serif;
-  color:#000080;
+  color:#64485C;
   font-size:4em;
   position: absolute;
   left: 10px;
