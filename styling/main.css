@@ -675,3 +675,14 @@ blockquote span{
   padding-left: 22px ;
   text-indent: -22px ;
 }
+
+.sandraimg {
+  border-radius: 5px;
+  border-color: #DA7B93;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.modal
