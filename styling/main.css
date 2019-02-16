@@ -321,7 +321,7 @@ blockquote span{
   margin-top:1em;
 }
 
-sandrablockquote{
+.sandrablockquote{
   margin-left: 5%;
   margin-right: 10%;
   font-style:italic;
@@ -335,7 +335,7 @@ sandrablockquote{
   background:#EDEDED;
 }
 
-sandrablockquote::before{
+.sandrablockquote::before{
   font-family:Arial;
   content: "\201C";
   color:#000080;
@@ -345,11 +345,11 @@ sandrablockquote::before{
   top:-10px;
 }
 
-sandrablockquote::after{
+.sandrablockquote::after{
   content: '';
 }
 
-sandrablockquote span{
+.sandrablockquote span{
   display:block;
   color:#333333;
   font-style: normal;
