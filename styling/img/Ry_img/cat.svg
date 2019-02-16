@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1500"
+   height="1000"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="affordance.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.4001508"
+     inkscape:cx="667.89033"
+     inkscape:cy="514.89187"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="713"
+     inkscape:window-x="0"
+     inkscape:window-y="30"
+     inkscape:window-maximized="1"
+     width="2000px" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-52.362387)">
+    <text
+       xml:space="preserve"
+       style="font-size:69.93804932px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Raleway;-inkscape-font-specification:Raleway"
+       x="647.22797"
+       y="982.62378"
+       id="text2985"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan2987"
+         x="647.22797"
+         y="982.62378">affordance</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:69.93804932px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="1015.2839"
+       y="886.92859"
+       id="text2989"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan2991"
+         x="1015.2839"
+         y="886.92859">oui</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:69.93804932px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="476.99026"
+       y="889.55304"
+       id="text2993"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan2995"
+         x="476.99026"
+         y="889.55304">non</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text2997"
+       y="119.44037"
+       x="-615.83569"
+       style="font-size:69.93804932px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Raleway;-inkscape-font-specification:Raleway"
+       xml:space="preserve"
+       transform="matrix(0,-1,1,0,0,0)"><tspan
+         y="119.44037"
+         x="-615.83569"
+         id="tspan2999"
+         sodipodi:role="line">perception</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3001"
+       y="269.92902"
+       x="-276.31955"
+       style="font-size:69.93804932px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"
+       transform="matrix(0,-1,1,0,0,0)"><tspan
+         y="269.92902"
+         x="-276.31955"
+         id="tspan3003"
+         sodipodi:role="line">oui</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3005"
+       y="276.48328"
+       x="-714.91388"
+       style="font-size:69.93804932px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"
+       transform="matrix(0,-1,1,0,0,0)"><tspan
+         y="276.48328"
+         x="-714.91388"
+         id="tspan3007"
+         sodipodi:role="line">non</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.07303023px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 244.40018,440.87785 1028.84242,0"
+       id="path3009"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.87875891px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 801.68704,96.66645 0,736.57618"
+       id="path3011"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#0000ff;fill-opacity:0.17679557"
+       transform="matrix(1.2777144,0,0,1.2777144,404.45236,168.76344)"
+       d="m 667.24846,366.37079 a 162.43877,81.219383 0 1 1 -324.87753,0 162.43877,81.219383 0 1 1 324.87753,0 z"
+       sodipodi:ry="81.219383"
+       sodipodi:rx="162.43877"
+       sodipodi:cy="366.37079"
+       sodipodi:cx="504.80969"
+       id="path3797"
+       sodipodi:type="arc" />
+    <text
+       xml:space="preserve"
+       style="font-size:69.93804932px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="896.52313"
+       y="622.2403"
+       id="text3015"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3017"
+         x="896.52313"
+         y="622.2403"
+         style="font-size:55.95044327px">affordance </tspan><tspan
+         sodipodi:role="line"
+         x="896.52313"
+         y="692.17834"
+         id="tspan3019"
+         style="font-size:55.95044327px">dissimulée</tspan></text>
+    <path
+       sodipodi:type="arc"
+       id="path3027"
+       sodipodi:cx="504.80969"
+       sodipodi:cy="366.37079"
+       sodipodi:rx="162.43877"
+       sodipodi:ry="81.219383"
+       d="m 667.24846,366.37079 a 162.43877,81.219383 0 1 1 -324.87753,0 162.43877,81.219383 0 1 1 324.87753,0 z"
+       transform="matrix(1.2777144,0,0,1.2777144,400.95544,-238.38386)"
+       style="fill:#0000ff;fill-opacity:0.17679557" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3021"
+       y="211.60265"
+       x="893.89868"
+       style="font-size:69.93804932px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         y="211.60265"
+         x="893.89868"
+         id="tspan3023"
+         sodipodi:role="line"
+         style="font-size:55.95044327px">affordance </tspan><tspan
+         id="tspan3025"
+         y="281.54068"
+         x="893.89868"
+         sodipodi:role="line"
+         style="font-size:55.95044327px">perceptible</tspan></text>
+    <path
+       style="fill:#0000ff;fill-opacity:0.17679557"
+       transform="matrix(1.2777144,0,0,1.2777144,-84.056939,-234.01438)"
+       d="m 667.24846,366.37079 a 162.43877,81.219383 0 1 1 -324.87753,0 162.43877,81.219383 0 1 1 324.87753,0 z"
+       sodipodi:ry="81.219383"
+       sodipodi:rx="162.43877"
+       sodipodi:cy="366.37079"
+       sodipodi:cx="504.80969"
+       id="path3807"
+       sodipodi:type="arc" />
+    <text
+       xml:space="preserve"
+       style="font-size:69.93804932px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="408.88644"
+       y="215.97209"
+       id="text3809"
+       sodipodi:linespacing="125%"><tspan
+         style="font-size:55.95044327px"
+         sodipodi:role="line"
+         id="tspan3811"
+         x="408.88644"
+         y="215.97209">affordance </tspan><tspan
+         style="font-size:55.95044327px"
+         sodipodi:role="line"
+         x="408.88644"
+         y="285.91013"
+         id="tspan3813">trompeuse</tspan></text>
+    <path
+       style="fill:#0000ff;fill-opacity:0.17679557"
+       transform="matrix(1.2777144,0,0,1.2777144,-89.299007,176.62323)"
+       d="m 667.24846,366.37079 a 162.43877,81.219383 0 1 1 -324.87753,0 162.43877,81.219383 0 1 1 324.87753,0 z"
+       sodipodi:ry="81.219383"
+       sodipodi:rx="162.43877"
+       sodipodi:cy="366.37079"
+       sodipodi:cx="504.80969"
+       id="path3819"
+       sodipodi:type="arc" />
+    <text
+       xml:space="preserve"
+       style="font-size:69.93804932px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="442.96957"
+       y="622.2403"
+       id="text3821"
+       sodipodi:linespacing="125%"><tspan
+         style="font-size:55.95044327px"
+         sodipodi:role="line"
+         x="442.96957"
+         y="622.2403"
+         id="tspan3825">  rejet</tspan><tspan
+         style="font-size:55.95044327px"
+         sodipodi:role="line"
+         x="442.96957"
+         y="692.17834"
+         id="tspan3831">correct</tspan><tspan
+         style="font-size:55.95044327px"
+         sodipodi:role="line"
+         x="442.96957"
+         y="762.11639"
+         id="tspan3829" /></text>
+  </g>
+</svg>

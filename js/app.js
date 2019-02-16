@@ -1,4 +1,4 @@
-var app = angular.module('fran502', ['ngAnimate', 'ngRoute', 'ui.bootstrap']);
+var app = angular.module('fran502', ['ngAnimate', 'ngRoute', 'ui.bootstrap',  'slickCarousel', 'duScroll']);
 
 app.config(function($routeProvider) {
     $routeProvider
@@ -34,7 +34,9 @@ app.config(function($routeProvider) {
 app.controller('ctrl', function($scope, $window, $uibModal, $location) {
   $scope.model = {
     navVisible: false,
-    apprenants:  [{title:"Catherine", link:"#!Catherine"}, {title:"Rachel", link:"#!Rachel"}, {title:"Sandra", link:"#!Sandra"}, {title:"Pamela", link:"#!Pamela"}, {title:"Francesca", link:"#!Francesca"}, {title:"Ryleigh", link:"#!Ryleigh"}, {title:"Anna", link:"#!Anna"}]
+    sticky: false,
+    apprenants:  [{title:"Catherine", link:"#!Catherine"}, {title:"Rachel", link:"#!Rachel"}, {title:"Sandra", link:"#!Sandra"}, {title:"Pamela", link:"#!Pamela"}, {title:"Francesca", link:"#!Francesca"}, {title:"Ryleigh", link:"#!Ryleigh"}, {title:"Anna", link:"#!Anna"}],
+    slides: [{id:0, src:"./styling/img/anna/sheep0.jpeg"}, {id:1, src:"./styling/img/anna/sheep1.jpg"}, {id:2, src:"./styling/img/anna/sheep2.jpg"}]
   }
   $scope.nav_toggle = function(){
     $scope.model.navVisible = !$scope.model.navVisible;
@@ -56,8 +58,18 @@ app.controller('ctrl', function($scope, $window, $uibModal, $location) {
     $scope.model.modalInstance.close();
   }
 
-});
+  angular.element($window).bind("scroll", function () {
+        var fromTop = $window.pageYOffset;
+        elem = angular.element( document.querySelector( '.sticky-nav' ));
+        if(fromTop > 150) {
+          elem.addClass('sticky')
+        }
+        else {
+          elem.removeClass('sticky')
+        }
+  });
 
+});
 
 app.directive("clickElsewhere", function($document) {
   return {
