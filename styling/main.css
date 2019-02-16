@@ -365,3 +365,8 @@ blockquote span{
   font-weight: bold;
   margin-top:1em;
 }
+
+.sandrahangingindent {
+  padding-left: 22px ;
+  text-indent: -22px ;
+}
