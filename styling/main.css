@@ -262,3 +262,308 @@ blockquote span{
   font-weight: bold;
   margin-top:1em;
 }
+
+.sticky-nav {
+  width: 600px;
+  height: 75px;
+  background: #005493;
+  margin: auto;
+  border-radius: 25px;
+}
+
+.sticky{
+  position: fixed !important;
+  top: 20px;
+  overflow: hidden;
+  z-index: 10;
+  left: 27%;
+}
+
+
+.nav-icon {
+  display: inline;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.nav-block {
+  margin-left: 60px;
+}
+
+.icon {
+  height: 56px;
+  width: 56px ;
+  text-align: center;
+  background-color: white;
+  border-radius: 50%;
+  border: 5px solid;
+  font-size: 25px;
+  margin-top: 7px;
+  line-height: 1.85;
+}
+
+.icon:hover {
+  height: 62px;
+  width: 62px ;
+}
+
+#it-link {
+  color: #30ad71;
+  border-color: #30ad71;
+}
+
+#ai-link {
+  color: #9b41ad;
+  border-color: #9b41ad;
+}
+
+#pa-link {
+  color: #d13251;
+  border-color: #d13251;
+}
+
+#dd-link {
+  color: #c96004;
+  border-color: #c96004;
+}
+
+#hci-link {
+  color: #08d1cd;
+  border-color: #08d1cd;
+}
+
+.titre-anna {
+  color: #0a1a33 !important;
+}
+
+.post-title{
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 4vh;
+  margin-bottom: 2vh;
+  color: #0a1a33;
+}
+
+.aside-title {
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+  margin-top: 4vh;
+  margin-bottom: 2vh;
+  color: #0a1a33
+}
+
+.content-anna p {
+  margin-top: 4vh;
+}
+
+.aside {
+  border: 2px solid #0a1a33;
+  background: rgba(167, 181, 204, 0.5);
+  border-radius: 25px;
+  width: 90%;
+  margin: auto;
+  padding: 20px 20px 20px 20px;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 7vh;
+  margin-bottom: 7vh;
+}
+
+
+.aside-content {
+  text-align: left;
+}
+
+#topic-list p {
+  margin-left: 20px;
+  margin-top: -2px;
+}
+
+.ref-section {
+  font-size: 14px;
+  color: #595858;
+  margin-top: 20px;
+}
+
+.ref-item p{
+  margin-top: -7px;
+}
+
+.ref-item{
+  margin-top: -5px;
+}
+
+.integrated-image {
+  height: auto;
+  text-align: center;
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+}
+
+.oversize {
+  width: 90%;
+  height: auto;
+}
+
+.sheep-pic {
+  height: 300px;
+  width: auto;
+}
+
+.carousel {
+  margin: auto;
+}
+
+.slick-arrow::before {
+  color: #0a1a33;
+}
+
+#mindmap {
+  width: 100%;
+  height: auto;
+}
+
+#topic-list {
+  margin-top: 3vh;
+  margin-bottom: 2vh;
+}
+
+#markov_prop {
+  font-weight: bold;
+  color:#0a1a33;
+}
+
+.modal-container {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  white-space: nowrap;
+  line-height: 1.5
+}
+
+.modal-container a {
+  color: #0a1a33 !important;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#markov-modal {
+  background-color: rgba(48, 173, 113, 0.6);
+  position: absolute;
+  left: -145px;
+  top: 1060vh;
+}
+
+#gendermag-modal {
+  background-color: rgba(8, 209, 205, 0.7);
+  position:absolute;
+  left: -145px;
+  top: 2200vh;
+}
+
+#nn-modal {
+  background-color: rgba(155, 65, 173, 0.7);
+  position:absolute;
+  right: -145px;
+  top: 2700vh;
+}
+
+#iterative-modal {
+  background-color: rgba(209, 50, 81, 0.7);
+  position:absolute;
+  right: -145px;
+  top: 1700vh;
+}
+
+
+.modal-content {
+  width: 100%;
+  padding: 20px 20px 20px 20px;
+  box-shadow: none !important;
+  border: none !important;
+  font-size: 14px;
+}
+
+.modal-title {
+  background-color: rgba(10, 26, 51, 0.6);
+  color: white;
+  width: 100%;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 10px 10px 10px 10px;
+  border-radius: 25px;
+}
+
+.fa-times {
+  color: #0a1a33;
+  font-size: 30px;
+  margin-left: -15px;
+  margin-top: -15px
+}
+
+.modal-vid iframe {
+  width: 100%;
+}
+
+.modal-vid {
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+}
+
+.quote {
+  border-left: 5px solid;
+  margin-top: 10%;
+  font-style: italic;
+  color: #0a1a33;
+  font-size: 16px;
+  margin-left: 30px;
+}
+
+.quote p {
+  margin-left: 5%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.quote div {
+  margin-left: 5%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.dd-quote {
+  border-color: #c96004;
+}
+
+.pa-quote {
+  border-color: #d13251;
+}
+
+.it-quote {
+  border-color:#30ad71;
+}
+
+.ai-quote {
+  border-color: #9b41ad;
+}
+
+.hci-quote {
+  border-color: #08d1cd;
+}
+
+.contact {
+  margin-top: 10%;
+  margin-bottom: 7%;
+  font-size: 25px;
+  width: 100%;
+  text-align: center;
+}
+
+.contact span {
+  margin-left: 5%;
+}
+
+.contact a {
+  color: #0a1a33 !important;
+}
