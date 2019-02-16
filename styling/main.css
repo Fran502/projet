@@ -177,14 +177,86 @@ menu {
 .racheltitre {
   font-family: 'Lato', sans-serif;
   font-size: 72px;font-weight: bold;
-  color:#4286f4;}
+  color:#4f4472;}
 
 .rachelsous-titre {
   font-family: 'Lato', sans-serif;
   font-size: 30px;
   font-style: italic;
-  color: #162f56
+  color: #7668a5
 }
+
+.rachelcite {}
+  *, *:before, *:after{
+      margin: 0;
+      padding: 0;
+      direction: ltr;
+      box-sizing: border-box;
+  }
+  html{
+    font-size: 16px;
+    line-height: 1.8;
+  }
+  .ArticleCopy{
+    font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+    width: 80%;
+    margin:0 auto;
+    border: 1px solid #ddd;
+    padding: 3rem;
+  }
+  .ArticleCopy p {
+      text-rendering: optimizeLegibility;
+  }
+  .ArticleCopy blockquote {
+      border-radius: 3px;
+      position: relative;  /*  <--- */
+      font-style: italic;
+      text-align: center;
+      padding: 1rem 1.2rem;
+      width: 80%;  /* create space for the quotes */
+      color: #4a4a4a;
+      margin: 1rem auto 2rem;
+      color: #4a4a4a;
+      background: #E8E8E8;
+  }
+  /* -- create the quotation marks -- */
+  .ArticleCopy blockquote:before,
+  .ArticleCopy blockquote:after{
+      font-family: FontAwesome;
+      position: absolute;
+      /* -- inside the relative position of blockquote -- */
+      top: 13px;
+      color: #E8E8E8;
+      font-size: 34px;
+  }
+  .ArticleCopy blockquote:before{
+      content: "\f10d";
+      margin-right: 13px;
+      right: 100%;
+  }
+  .ArticleCopy blockquote:after{
+      content: "\f10e";
+      margin-left: 13px;
+      left: 100%;
+  }
+
+  hr.style12 {
+  	height: 6px;
+  	background: url(http://ibrahimjabbari.com/english/images/hr-12.png) repeat-x 0 0;
+      border: 0;
+  }
+  hr.style18:before {
+  display: block;
+  content: "";
+  height: 30px;
+  margin-top: -31px;
+  border-style: solid;
+  border-color: #8c8b8b;
+  border-width: 0 0 1px 0;
+  border-radius: 20px;
+}
+
+
 
 .francescatitre {
   font-family: 'Alegreya Sans', sans-serif;
@@ -566,4 +638,39 @@ blockquote span{
 
 .contact a {
   color: #0a1a33 !important;
+}
+.sandrablockquote{
+  margin-left: 5%;
+  margin-right: 10%;
+  font-style:italic;
+  color: ##E8E8E8;
+  padding:1.2em 30px 1.2em 75px;
+  border-left:8px solid #000080 ;
+  border-radius: 8px;
+  box-shadow: 10px 10px 5px grey;
+  line-height:1.6;
+  position: relative;
+  background:#EDEDED;
+}
+
+.sandrablockquote::before{
+  font-family: 'Sarabun', sans-serif;
+  color:#000080;
+  font-size:4em;
+  position: absolute;
+  left: 10px;
+  top:-10px;
+}
+
+.sandrablockquote span{
+  display:block;
+  color:#333333;
+  font-style: normal;
+  font-weight: bold;
+  margin-top:1em;
+}
+
+.sandrahangingindent {
+  padding-left: 22px ;
+  text-indent: -22px ;
 }
