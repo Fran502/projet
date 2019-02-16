@@ -3,10 +3,340 @@
   <body>
     <div class="page-acceil">
       <div class="title-header">
-        <p class="titre">Anna</p>
-        <p class="sous-titre">L'approche numérique à l'analyse des productions des apprenants de L2</p>
+        <p class="titre titre-anna">Anna</p>
+        <p class="sous-titre">Un survole de l'ELAO d'un point de vue informatique</p>
       </div>
-      <div class="main-content">
+      <div class="main-content content-anna col-md-12">
+        <div class="sticky-nav">
+          <div class="nav-block">
+            <a du-smooth-scroll="dd-section"><div class="nav-icon" id="dd-link"><i class="icon fa fa-database"></i></div></a>
+            <a du-smooth-scroll="it-section"><div class="nav-icon" id="it-link"><i class="icon fa fa-university"></i></div></a>
+            <a du-smooth-scroll="pa-section"><div class="nav-icon" id="pa-link"><i class="icon fa fa-code"></i></div></a>
+            <a du-smooth-scroll="hci-section"><div class="nav-icon" id="hci-link"><i class="icon fa fa-user"></i></div></a>
+            <a du-smooth-scroll="ai-section"><div class="nav-icon" id="ai-link"><i class="icon fa fa-cogs"></i></div></a>
+          </div>
+        </div>
+        <div class="main-blogs col-md-10 col-md-offset-1">
+          <div class="post">
+            <div class="post-title">Introduction</div>
+            <div class="post-content">
+              <p>La réaction de la plupart des gens en apprenant mon programme d'études est une variante de «Une mineure français ? C'est assez éloigné de l'informatique!». Ma réponse habituelle est de sourire et de hocher la tête avec indulgence, peut-être en offrant quelques lignes désinvoltes à propos d'un " changement de rythme ", mais, en vérité, plus j'approfondis les deux sujets, plus ils sont entrelacés. Ce cours, le <a href="https://www.uvic.ca/humanities/french/graduate/courses/502-syllabus-201901.pdf" target="_blank">FRAN 502</a>, se situe au plein milieu de leur intersection.</p>
+              <p>Je suis consciente que ma formation m'impose une perspective particulière. J'ai vu les arbres binaires en contexte informatique bien avant de les voir en cours de linguistique, et pour moi, le nom de John Backus s'associait à la grammaire générative avant celui de Noam Chomsky. La figure ci-dessus qui démontre quelques-uns des liens que j'ai trouvés entre les deux domaines de mes études: on pourrait la dire un remue méninges ou une carte cognitive, mais je le qualifierais d'abord et avant tout comme étant un graphe orienté et acyclique.</p>
+              <div class="integrated-image">
+                <img id="mindmap" src="./styling/img/anna/fran_cs_graph.png">
+              </div>
+              <p>Tout le long de mes lectures, c'est l'application des outils et techniques, que je n'ai rencontré que dans un contexte informatique, à la linguistique et l'apprentissage, qui m'a piquée la curiosité. Où est-ce que des études linguistiques auraient elles pu bénéficier de l'analyse robuste numérique? Quelles faiblesses des outils numériques ont été relevées par de nouveaux types de données, et quelles solutions proposent-'on? Dans un domaine si intrinsèquement humaine, comment une intelligence artificielle s'en tire-t-elle? Ces interrogations m'ont mené à cinq croisements des domaines que je tente d'approfondir par la suite:
+                <div id="topic-list">
+                  <p><i class="fa fa-database" style="color:#c96004"></i>&nbsp&nbspL'apprentissage orientée données (pour des êtres humains)</p>
+                  <p><i class="fa fa-university" style="color:#30ad71"></i>&nbsp&nbspLes systèmes de tutorat intelligents</p>
+                  <p><i class="fa fa-code" style="color:#d13251"></i>&nbsp&nbspL'analyse syntaxique des productions fautives</p>
+                  <p><i class="fa fa-user" style="color:#08d1cd"></i>&nbsp&nbspL'inclusion des formalités du domaine de l'interaction homme-machine (IHM)</p>
+                  <p><i class="fa fa-cogs" style="color:#9b41ad"></i>&nbsp&nbspLe potentiel de l'apprentissage automatique non-supervisé</p>
+                </div>
+              </p>
+              <span><b><i>Bonne lecture!</i></b></span>
+            </div>
+          </div>
+          <div class="post" id="dd-section">
+            <div class="post-title">L’apprentissage orientée données</div>
+            <div class = "post-content">
+              <p>On désigne les activités ou approches qui se construisent autour d’un corpus linguistique comme étant <i>orientée données</i>.</p>
+              <p>Un corpus linguistique c’est tout simplement un ensemble de productions langagières; au plus souvent, les productions sont celles de locuteurs natifs, mais parfois ils viennent des apprenants L2. Il est tenu comme acquis que les corpus ont une certaine cohérence, voulant dire que les productions qui y appartiennent rentrent tous dans la même catégorie - en tant que niveau, type de production (écrit ou orale), longueur - et ont été suscitées de la même manière (questionnaires, entrevues, conversations spontanés, etc.). Cela dit, il existe bien sûr des exceptions; les corpus longitudinaux, par exemple, comprennent des données des locuteurs d'âge et de niveau varié car ils tentent de suivre le développement langagière des sujets afin d’étudier l'acquisition du langage.</p>
+              <p>Ce type de données a long été (depuis les années 1950) la base des techniques de traduction automatique statistique. Le rapport fondateur venant des chercheurs de IBM [1] le décrit comme un processus à trois étapes:</p>
+              <div class="quote dd-quote">
+                <p>« Translation can be  somewhat naively regarded as a three stage process:<br>
+                    (i)Partition the source text into a set of fixed locutions
+                    <br>(ii)Use the glossary plus contextual information to select the corresponding set of fixed locutions in the target language
+                    <br>(iii)Arrange the words of the target fixed locutions into a sequence that forms the target sentence »</p>
+              </div>
+              <p>Au fond, l'algorithme utilise un corpus parallèle (où une correspondance a été établit entre des phrases) et la statistique bayésienne (qui exige l'importance du contexte des mots) pour trouver la traduction la plus probable.</p>
+              <p>On peut facilement voir pourquoi les données sont requises pour l'apprentissage des langues par des machines - ils sont incapables de penser pour eux-mêmes - mais en quoi l'analyse des données est-elle utile aux apprenants et aux enseignants humains?</p>
+              <p>Chez les apprenants, l'apprentissage orientée données permet l'exploration et l'autocorrection. Dans le cadre de ce cours nous avons beaucoup discuté l'importance des tâches pédagogiques ancrées dans la vie réelle; c'est cette authenticité qu'offrent les corpus L1. En fouillant dans les données, les étudiants apprennent par induction: ils peuvent former, à partir de leurs observations, leurs propres hypothèses portant sur l'emploie de certains mots, ou des structures grammaticales particuliers - des hypothèses qu'ils peuvent ensuite vérifier auprès d'un manuel ou leur enseignant. Cette notion de l'apprentissage de langue comme travail de détective est bien exprimé par Granger et Guilquin (2010) [2]:</p>
+              <div class="quote dd-quote">
+                <p>« The DDL approach also has the advantage of including an element of discovery which arguably makes learning more motivating and more fun. In the DDL literature, learners are described, alternatively, as travellers (Bernardini 2001: 22), researchers (Johns 1997: 101), or detectives with John’s (1997: 101) slogan ‘Every student a Sherlock Holmes’. By means of various  activities  (see  Section  3),  learners  are  encouraged  to  observe corpus  data,  make hypotheses and formulate rules in order to gain insights into language »</p>
+              </div>
+            </div>
+            <p>Les apprenants peuvent également bénéficier de l’exposition à des corpus des productions L2 qui sont annotés avec les erreurs, ils peuvent constater et comprendre les défauts de leur propres écritures pour ensuite pouvoir les corrigés.</p>
+            <p>Face à ces méthodes qui sont, de toute évidence, très fructueux, il faut s’interroger sur pourquoi elles ne sont pas plus répandues dans la salle de classe. Leńko-Szymańska et  Boulton [3] illuminent quelques défis et suggèrent  parallèlement quelques solutions possibles. Les deux gros obstacles qu’ils relèvent d’un survole de nombreuses études sont: (1) la nécessité d’un certain niveau de connaissances chez les apprenants, afin de pouvoir bien manipulé les données; et (2) le besoin des étudiants d'être d’un niveau suffisamment élevé pour en tirer profit de l’apprentissage pour induction - cela voulant dire un besoin des compétences grammaticales de base. Selon Leńko-Szymańska et  Boulton, cette première pourrait se remédier par l’exclusion complète de l’ordinateur; peut-être une mesure un peu drastique mais, comme ils disent à juste titre, des imprimés peuvent exposer les apprenants aux donnés pertinents presque aussi efficacement. Afin de surmonter la question des niveaux, ils montrent que la création des corpus simplifiés ou ciblés a déjà vu du succès.</p>
+            <p>Pour les enseignants, l'analyse des corpus peut les aider à mieux adapter leurs cours aux besoins d'un groupe particulier. De trier les données d'un corpus L2 annoté permet l'identification des thèmes d'erreurs, et l'observation des fréquences de certaines erreurs ou même structures grammaticales, en vue de comprendre le cheminement des étudiants; c'est une évaluation quantitative robuste. Ces thèmes portent une encore plus grande importance lors que le groupe partage une langue maternelle [4], car, comme démontre la tâche numérique de l'identification de la langue maternelle (à partir des productions L2 écrites), il existe des idiosyncrasies linguistiques propres à certaines langues maternelles. Par exemple, les apprenants chinois de l'anglais ont souvent du mal avec les temps des verbes, car il n'existe pas, pour eux, une notion parallel, et la surutilisation de la préposition ‘in' a été observé chez les apprenants finnois de l'anglais, car leur langue n'est pas aussi spécifique que l'anglais en regard de cette catégorie grammaticale [5].</p>
+            <div class="ref-section">
+              <p class="ref-item">
+                <a href="https://www.researchgate.net/profile/Robert_Mercer4/publication/234815897_A_statistical_approach_to_language_translation/links/5523ce980cf24f1609437924.pdf" target="_blank">[1]</a>
+                Brown, P., Cocke, J., Pietra, S. D., Pietra, V. D., Jelinek, F., Mercer, R., & Roossin, P. (1988, August). A statistical approach to language translation. In Proceedings of the 12th conference on Computational linguistics-Volume 1 (pp. 71-76). Association for Computational Linguistics.
+              </p>
+              <p class="ref-item">
+                <a href="https://www.researchgate.net/publication/228984095_How_can_DDL_be_used_in_language_teaching" target="_blank">[2]</a>
+                Gilquin, G., & Granger, S. (2010). How can data-driven learning be used in language teaching. The Routledge handbook of corpus linguistics, 359370.
+              </p>
+              <p class="ref-item">
+                <a href="https://www.researchgate.net/publication/278801398_Introduction_Data-driven_learning_in_language_pedagogy" target="_blank">[3]</a>
+                Agnieszka Leńko-Szymańska & Alex Boulton. (2015). Data-driven learning in language pedagogy. Introduction de A. Leńko-Szymańska & A. Boulton (eds), Multiple Affordances of Language Corpora for Data-driven Learning. Amsterdam: John Benjamins, p. 1-14.
+              </p>
+              <p class="ref-item">
+                <a href="https://journals.openedition.org/rdlc/1716" target="_blank">[4]</a>
+                De Cock, S., & Tyne, H. (2014). Corpus d'apprenants et acquisition des langues. Recherches en didactique des langues et des cultures. Les cahiers de l'Acedle, 11(11-1).
+              </p>
+              <p class="ref-item">
+                <a href="http://www.aclweb.org/anthology/D16-1195" target="_blank">[5]</a>
+                Chollampatt, S., Hoang, D. T., & Ng, H. T. (2016). Adapting grammatical error correction based on the native language of writers with neural network joint models. In Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing (pp. 1901-1911).
+              </p>
+            </div>
+          </div>
+          <div class="post" id="it-section">
+            <div class="post-title">Les systèmes de tutorat intelligents</div>
+            <div class="post-content">
+              <p>Un système de tutorat intelligent, dans le contexte de l'enseignement de langues assisté par ordinateurs, c'est un environnement numérique pour l'apprentissage des langues qui est rendu intelligent par l'inclusion des techniques de traitement automatique du langage (TAL) et d'intelligence artificielle (IA) qui le permet d'offrir des conseils et de personnaliser les exercices aux besoins de chaque étudiant, tout sans l'intervention d'un être humain.</p>
+              <p>Pour démontrer la fonctionnalité typique d'un de ces systèmes je vais utiliser le E-tutor de Trude Heift, qui a été conçu pour les apprenants L2 d'allemand de niveau universitaire [1]. Les exercices du E-tutor exposent les apprenants au contenu des 15 chapitres du texte populaire «Deutsch: Na klar!». Chaque chapitre propose des activités diverses portant sur un thème - par exemple, la famille et les amis - qui se répartissent en neuf catégories qui incluent des exercices de compréhension de textes, de construction des phrases et d'écritures, parmi autres.</p>
+              <div class="aside">
+                <div class="aside-title">L'approche générative à la création des exercices</div>
+                <div class="aside-content">
+                  <p>Comme le sont habituellement les exercices des systèmes de tutorat, les questions du E-tutor sont fournis à l'avance par un enseignant. Pourtant, cela n'est pas toujours le cas.</p>
+                  <p>Le système ‘sentence fairy' de Harbusch, Itsova, Koch et Kühner, vise à développer les compétences de rédaction de textes chez des jeunes apprenants L1 d'allemand - pas en tant de créativité mais de structure[2]. Au lieu de devoir créer une collection entière d'exercices, l'enseignant fournit uniquement un ‘noyau' d'histoire que le système et indique les concordances importantes au sens - par exemple, si le nom propre ‘Tim' et le sujet ‘le garçon' qui apparaît plus tard
+                  font référence à la même entité. Par l'emploi des techniques d'analyse syntaxique et génération du langage, le système crée des paraphrases qu'il combine en trois types d'exercices: reconstruction d'une histoire, combinaison de phrases et ordre des mots.</p>
+                  <div class="integrated-image">
+                    <img src="./styling/img/anna/fairy.png">
+                  </div>
+                  <p>Le choix de générer les paraphrases fait que l'outil peut utiliser une interface glisser-déposer - l'interface de l'outil d'enseignement de la programmation <a href="https://scratch.mit.edu/" target="_blank">Scratch</a> est très similaire, si vous cherchez un exemple - ce qui a deux avantages importants: (1) l'interface convient mieux aux besoins des jeunes apprenants qui n'ont pas encore développé une aptitude pour le clavardage et (2) ça élimine la plus grande source d'erreurs d'analyse - les fautes d'orthographe - qui permet la concentration sur la structure qui fut l'objet de l'exercice. Cela limite aussi le domaine possible des productions ce qui, pour des raisons techniques discutés dans la prochaine section, améliore la qualité des conseils offerts aux apprenants.</p>
+                </div>
+              </div>
+              <p>L'analyse des productions des apprenants, à l'exception des tâches de rédaction à longue forme, est entièrement automatique. À la recherche des erreurs grammaticales, les productions désignées comme fautifs suite à la faillite d'un test de concordance de texte passent par huit niveaux d'analyse, illustrés dans la figure ci-dessous [2]. Les résultats de cette analyse (les détails de comment se fait l'analyse se trouvent dans la prochaine section) sont présentés à l'étudiant et l'interface leur permet ensuite à corriger, d'une manière itérative, leurs erreurs. Pendant cette étape, l'interface leur offre de l'aide en contexte qui explique leurs erreurs.</p>
+              <div class="integrated-image">
+                <img src="./styling/img/anna/e-tutor_analysis.png">
+              </div>
+              <p>E-tutor fournit également des conseils préventifs - de conseils qui, selon leurs interactions avec le système, indique aux apprenants s'ils trouveraient un exercice difficile et leur suggère des concepts à réviser. Afin de pouvoir faire ces suggestions, le système crée un modèle statistique de chaque utilisateur. Pour chaque étudiant, il note le numéro et le type d'erreurs commises. Il crée également un profil de l'étudiant selon ses interactions avec le système - est qu'ils ont souvent la bonne réponse? Est-qu'ils utilisent souvent les fonctionnalités d'aide qui leur donnent des indices ou leur permet de voir une partie de la réponse ? Ce sont aussi ces données qui permettent le système intelligent de personnaliser le choix d'exercices proposés à chaque étudiant.</p>
+              <p>Finalement, E-tutor permet à chaque étudiant de voir leurs propres statistiques, ce qui entraîne l'introspection, et aussi de se comparer aux statistiques cumulatifs des autres utilisateurs, ce qui ajoute un élément de ludification.</p>
+              <div class="aside">
+                <div class="aside-title">Une personnalisation plus légère sur le plan informatique</div>
+                <div class="aside-content">
+                  <p>Comme la majorité des systèmes de tutorat intelligents, E-tutor utilise un modèle numérique de chaque étudiant afin d'optimiser la suite d'exercices qu'il leur propose.</p>
+                  <p>Malgré le fait que cette méthode est très répandue, elle a toujours ses faiblesses:</p>
+                  <ul>
+                    <li>Beaucoup se penche sur un modèle potentiellement fautif</li>
+                    <li>De tenir compte d'un modèle pour chaque utilisateur, ça porte un coût numérique élevé (en tant que ressources et vitesse)</li>
+                  </ul>
+                  <p>Afin de contourner ces problèmes, des chercheurs de Supélec (France) ont proposé un modèle qui ne nécessite pas autant de données[3]:</p>
+                  <div class="quote it-quote">
+                    <p>« Aucun modèle, ni cognitif ni probabiliste de l’apprenant, n’est nécessaire. Seules sont requises des observations du comportement de l’apprenant alors qu’il interagit avec un système non-optimal »</p>
+                  </div>
+                  <p>Le système passe par des phases d’enseignement et d’apprentissage - des états, sur le plan numérique, et la personnalisation vient de la suite d’états sélectionnés selon les interactions de l’utilisateur avec l’interface. Il utilise la programmation dynamique - plus précisément , l’algorithme LSPI (Least Square Policy Iteration) - pour choisir le prochain état.</p>
+                  <p>Au fond, cet algorithme ressemble à un modèle markov, dont la propriété essentielle c’est une dépendance  uniquement sur l'action qui précède immédiatement l'état actuel (la supposition de l'indépendance conditionnelle des états). </p>
+                  <p id="markov_prop">La propriété markov: P(qt = i| qt−1 = j, qt−2 = k, ···) = P(qt = i| qt−1 = j)</p>
+                  <p>Un modèle markov utilise les probabilités de transition et d'émission ainsi que les observations d'états afin de décider ‘où aller'; les probabilités d'émission désignent les probabilités de voir certains états et les probabilités de transition décrivent la probabilité de passer d'un certain état à un autre. Comme ça, le prochain état est choisi à partir de données fixes, sans d'interaction avec l'utilisateur.</p>
+                  <p>Pendant que leurs premiers essais ont généré des résultats prometteurs, il y a deux grands soucis qu'il vaut la peine de souligner:</p>
+                  <ol>
+                    <li>Les probabilités de transition ne sont pas connus; ils ont été approximés en utilisant des données provenant des traces d'utilisation de systèmes déjà déployés</li>
+                    <li> Leurs tests n'ont utilisé que des interactions simulés</li>
+                  </ol>
+                  <p>Pendant que cette étude introduit des possibilités techniques qui méritent d'être exploré, les résultats sont loin d'être concluants.</p>
+                </div>
+              </div>
+              <div class="modal-container" id="markov-modal">
+                  <div><a ng-click="openModal('/projet/views/modals/markov_modal.html')">En savoir plus:<br> Les modèles markov</a></div>
+              </div>
+              <div class="ref-section">
+                <p class="ref-item">
+                  <a href="https://journals.equinoxpub.com/index.php/CALICO/article/viewFile/23021/19027" target="_blank">[1]</a>
+                  Heift, T. (2010). Developing an intelligent language tutor. CALICO journal, 27(3), 443-459
+                </p>
+                <p class="ref-item">
+                  <a href="https://userpages.uni-koblenz.de/~harbusch/SentFairy-calico-journal08.pdf" target="_blank">[2]</a>
+                  Harbusch, K., Koch, U., Kühner, C., Itsova, G., & van Breugel, C. “The Sentence Fairy”: NLP techniques in support of essay writing by German-speaking elementary schoolers.
+                </p>
+                <p class="ref-item">
+                  <a href="http://www.aclweb.org/anthology/F12-1031" target="_blank">[3]</a>
+                  Daubigney, L., Geist, M., & Pietquin, O. (2012). Optimisation d'un tuteur intelligent ą partir d'un jeu de données fixé (Optimization of a tutoring system from a fixed set of data)[in French]. In Proceedings of the Joint Conference JEP-TALN-RECITAL 2012, volume 1: JEP (pp. 241-248).
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="post" id="pa-section">
+            <div class="post-title">L'analyse syntaxique des productions fautives</div>
+            <div class="post-content">
+              <p>À la base de l'analyse syntaxique fait par presque tous systèmes de tutorat, on trouve l'analyseur syntaxique. L'analyseur syntaxique c'est essentiellement du logiciel qui détermine si une production - au niveau de ses composants de base - rentre dans un langage formel décrit par une grammaire générative.</p>
+              <p>Une grammaire formelle se compose d'un alphabet de variables, d'un alphabet de terminales, des règles de production et d'un axiome (pour commencer la dérivation). Notez la capacité qu'ont les grammaires formelles à représenter l'enchâssement qui caractérise le langage naturel ; les règles récursives où le même symbole non terminal apparaît à la droite et la gauche de l'expression sont communes.</p>
+              <p>L'exemple jouet ci-dessous c'est une petite grammaire qui décrit tout palindromes possibles dont l'alphabet est {‘a', ‘b'}. Observez comment on peut faire une dérivation aval pour obtenir une production qui appartient au langage par l'application récursive des règles de production à l'axiome; la représentation arborescente correspond à cette dérivation. On peut également faire la réduction en employant ces mêmes règles d'une production à l'axiome; c'est cela que font les analyseurs syntaxiques pour vérifier la validité des productions écrites.</p>
+              <div class="integrated-image">
+                <img src="./styling/img/anna/grammar.png">
+              </div>
+              <p>Dans un contexte linguistique, les symboles terminaux sont des mots et les symboles terminaux sont des composants du langage - par exemple, des syntagmes ou des parties du discours. Voyez la grammaire ci-dessous (Edouard Bonnet, Université Paris Dauphine). À partir de cette grammaire limitée on peut construire des phrases comme « Le chien mange dans le jardin. ».</p>
+              <div class="integrated-image">
+                  <img src="./styling/img/anna/grammar_ex.png">
+              </div>
+              <p>Les règles qui définissent une grammaire décrivent uniquement des productions ‘valides’ donc des linguistes ont dû développer des méthodes pour permettre la continuation de l'analyse même face à des productions erronés. Les deux approches dominantes sont (1) l’ajout des règles; et (2) le relâchement des contraintes.</p>
+              <p>Cette première approche ajoute des règles à la grammaire - dite ‘mal-rules’ lorsque l’analyseur rencontre des structures grammaticales qu’il ne reconnaît pas. Comme le décrit bien Schulze, ces nouveaux règles capte les erreurs que font les étudiants et en tient compte dans un modèle (qu’on peut analyser plus tard).</p>
+              <div class="quote pa-quote">
+                <p>« The model is based to some extend on error anticipation. Mal-rules capture errors the student made and enable the system to keep track of them in a model »[1]</p>
+              </div>
+              <p>Le grand problème avec ce système c'est que la grammaire peut s'étendre très rapidement. Dans un effort de contourner ces problèmes, certains systèmes essayent de limiter le domaine des productions (en tant que constructions et vocabulaire possible). Malheureusement cette approche a la potentielle de créer un environnement d'apprentissage peu authentique. Schulze donne quelques exemples qui utilisent une sorte de mise en scène; des tâches assez éloignées de la vie réelle.</p>
+              <p>Dans le système ‘Spion' (Molla, Sanders,&Sanders, 1988; A. F. Sanders&Sanders, 1982; R. H. Sanders, 1995) pour les apprenants d'allemand était un jeu vidéo où les étudiants jouent comme un espion à Berlin. Leur but c'était de lui conseiller (ce qui contrôle ses actions) en écrivant des phrases complètes et bien formées.</p>
+              <div class="quote pa-quote">
+                <p>« In this system, it is quite interesting to see how the researchers circumvented the problem of a limited parser dictionary. If the system does not recognize a word, it stays ‘in character’ and tells the student that such a word should not be used in the spy milieu or genre »</p>
+              </div>
+              <p>Dans un effort similaire, un autre système pour les apprenants d'allemand (DeSmedt, 1995) avait utilisé le contexte de la formulation des questions par un détective afin de limiter les constructions possibles.</p>
+              <p>L’autre approche, le relâchement des contraintes, adopte une certaine fluidité envers les règles de la grammaire, remplacent les résultats binaires imposés par la technologie - le langage <a href="http://www.swi-prolog.org/" target="_blank">Prolog</a> dans le cadre des projets E-tutor et Freetext - par des règles dites faibles qui admettent des constructions fautives mais notent les détails de la violation. Granger et al [2] décrivent succinctement les avantages de cette méthode:</p>
+              <div class="quote pa-quote">
+                <p>« Avec le relâchement de contraintes, nous admettons tout de même la construction d’un nouveau groupe, mais chaque condition qui n’est pas remplie est considérée comme une erreur et nous laissons une marque dans la structure pour indiquer les lieux et les types des erreurs détectées. Le relâchement  de  contraintes, comme  il est  utilisé ici,  a  l’avantage de  ne pas  être sélectif quant au lieu des erreurs. En relâchant l’accord en nombre, il est relâché à tous les endroits où cet accord se fait, que ce soit au niveau du groupe nominal, avec ou sans adjectif, ou au niveau de l’accord du participe passé »</p>
+              </div>
+              <p>Cette citation relève bien certains avantages du relachement mais je veux aussi souligner le fait que la généralisation des erreurs lors du relâchement - par exemple, des accords en contextes variés - c’est aussi un désavantage au niveau de l’analyse d'erreurs faites par les étudiants.</p>
+              <div class="aside">
+                <div class="aside-title"> Le correcteur Bon Patron et les faiblesses de l’analyse syntaxique</div>
+                <div class="aside-content">
+                  <p>Comme informaticienne, j’aime bien créer du logiciel mais c’est également amusant de faire de mon mieux de le briser!</p>
+                  <p>Armé de la connaissance des faiblesses communes des analyseurs syntaxiques qu'utilisent les correcteurs de grammaire je me suis mise à l’exploitation des <a href="http://www.baluchiterium.net/bug.php" target="_blank">bugs</a> du correcteur automatique BonPatron[3].</p>
+                  <p>Comme tout analyseurs syntaxiques, le Bonpatron est incapable de corriger des erreurs sémantiques. C’est infiniment plus difficile pour les ordinateurs de corriger le sens d’une phrase que sa structure grammaticale.Par exemple, parce qu'elle est bien formée, la phrase «La banane mange le gorille.» est dite correcte.Cela est également vrai des concordances. Les analyseurs syntaxiques ne peuvent pas comprendre (sans l'intervention humaine, comme dans le cas du ‘sentence fairy') la corrélation entre les noms et les pronoms qui désignent de fait les mêmes entités. La phrase ‘Mon chien est gentil. Elle a de belles yeux bleus.' est donc, selon le BonPatron, sans erreurs.</p>
+                  <p>Passons aux erreurs syntaxiques; les erreurs qu'on pourrait attendre qu'un analyseur syntaxique est capable d'identifier.</p>
+                  <p>J’ai observé un comportement étrange quand le système rencontre un adverbe qu’il ne reconnaît pas. Face à une phrase qui emploie ‘hyper’ comme adverbe - on pourrait dire que c’est une confusion juste, car ce mot dans ce contexte est familier - le BonPatron a mal regroupé les mots et avait suggéré d’accorder ‘hyper’ avec le sujet ayant mal identifié sa catégorie grammaticale. Ce comportement vient du fait que l’analyse ne de fait pas d’une manière holistique mais de gauche à droite (de façon itérative). Cette structure, selon les règles, cette structure demande un adverbe ou, plus probablement, un adjectif. Donc, dans le cas de ‘hyper’, il décide que c’est probablement un adjectif et suggère de l’accorder.</p>
+                  <div class="integrated-image">
+                    <img class="oversize" src="./styling/img/anna/bp_1.png">
+                  </div>
+                  <p>Quand j'ai remplacé ‘hyper' par ‘très' tout s'est réglé, car le système reconnaît l'adverbe et donc la construction.</p>
+                  <p>Cependant, cela n'est pas la fin des problèmes portants sur les adverbes. L'ajout d'un adverbe a, pour une raison ou un autre, masquer un problème de genre.</p>
+                  <p>La phrase «Mon chien est très belle» n'a généré aucune erreur pendant que le Bonpatron comprend facilement le problème avec la phrase «Mon chien est belle». Sans avoir recours à la liste des règles grammaticales j'ai, en ce moment, aucune explication de ce phénomène, mais c'est un mystère que je garde en tête!</p>
+                </div>
+              </div>
+              <div class="modal-container" id="iterative-modal">
+                  <div><a ng-click="openModal('/projet/views/modals/iterative_modal.html')">En savoir plus:<br> La question de<br> l'approche itérative</a></div>
+              </div>
+              <div class="ref-section">
+                <p class="ref-item">
+                  <a href="https://www.researchgate.net/profile/Mathias_Schulze2/publication/251340559_AI_in_CALL-artificially_inflated_or_almost_imminent/links/542eda9e0cf277d58e8fc64f.pdf" target="_blank">[1]</a>
+                  Schulze, M. (2008). AI in CALL: Artificially inflated or almost imminent. Calico Journal, 25(3), 510-527.
+                </p>
+                <p class="ref-item">
+                  <a href="https://www.researchgate.net/profile/Sylviane_Granger/publication/239403699_Analyse_des_corpus_d'apprenants_pour_l'ELAO_base_sur_le_TAL/links/0c96051dd2175c4ae9000000.pdf" target="_blank">[2]</a>
+                  Granger, S., Vandeventer, A., & Hamel, M. J. (1998). Analyse de corpus d’apprenants pour l’ELAO basé sur le TAL. Revue. Volume, 1(1).
+                </p>
+                <p class="ref-item">
+                  <a href="https://spellcheckplus.com/Resources/Docs/dublin.pdf" target="_blank">[3]</a>
+                  Nadasdi, T., & Sinclair, S. (2007). Anything I can do, CPU can do better: A comparison of human and computer grammar correction for L2 writing using BonPatron. com. Unpublished manuscript. Retrieved Sept, 1, 2010.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="post" id="hci-section">
+            <div class="post-title">L'inclusion des formalités du domaine de l'interaction homme-machine (IHM)</div>
+            <div class="post-content">
+              <p>Venant d'un monde scientifique, j'étais frappée en lisant un article de Mangenot et Soubrié [1] qui porte sur la conception et réalisation d'une banque de cyber tâches à des fins pédagogiques, par le manque d'évaluation d'interface systématisée et empirique. Selon l'article, la seule évaluation c'était l'observation des utilisateurs en contexte:</p>
+              <div class="quote hci-quote">
+                <p>« La  validation  finale  du  travail  effectué  demandera  d’aller  observer  auprès  des enseignants de terrain s’ils utilisent bien la banque »</p>
+              </div>
+              <p>Cela m'a étonnée. Dans le domaine du IHM, un sous domaine de l'informatique, il existe des pratiques standards répandues pour l'analyse qualitative et quantitative systématisé et robuste.</p>
+              <p>L'approche la plus commune dans le cadre de l'évaluation quantitative, c'est de faire des tests d'usabilité. Cela veut dire mesurer certains éléments de l'interaction des utilisateurs avec le système quand ils sont donnés une série de tâches à accomplir. On peut également interroger les utilisateurs au sujet de leur degré d'aise avec l'interface, mais ce sont les données empiriques qui priment. Le numéro de cliques (ainsi que l'endroit), le temps requis, ou le trajet prise (en comparaison avec un trajet idéal) sont quelques indicateurs desquels on pourrait tenir compte.</p>
+              <p>Heureusement, ces méthodes ne sont pas entièrement absentes du domaine de l'enseignement de langues assisté ordinateur, comme démontre l'évaluation de deux outils numériques pour les étudiants FLE faite par Caws et Hamel [2]. L'analyse de <a href="http://web5.uottawa.ca/direautrement/" target="_blank">Dire Autrement</a>, un projet dictionnaire, avait utilisé le temps passé sur une tâche et l'effort requis pour une recherche comme mesures d'efficacité. Dans l'analyse du <a href="https://francotoile.uvic.ca/" target="_blank">Francotoile</a>, une interface plutôt exploratrice, une échelle d'efficacité avait été utilisé pour classer le succès de la complétion d'une série de micro tâches.</p>
+              <p>L'analyse d'un système par des experts - dite analyse heuristique - est aussi souvent employé.</p>
+              <div class="quote hci-quote">
+                <p>« In heuristic evaluation, UI specialists study the interface in depth and look for properties that they know, from experience, will lead to usability problems »[3]</p>
+              </div>
+              <p>En gros, cela s'agit de voir si les <a href="https://fran502.github.io/projet/#!/Ryleigh" target="_blank">affordances</a> de l'interface indiquent bien sa fonctionnalité. Pendant que ce type d'évolution a déjà été établie comme efficace, il y a un gros problème qu' illumine bien la citation ci-dessus: les évaluateurs ce sont des experts; ayant tant travailler dans le domaine , ils manquent parfois la perspective d'un utilisateur qui ne connaît pas intimement le système.</p>
+              <p>Une technique utilisée afin d'éviter ce problème, c'est la promenade cognitif. Prenant un point de vue focalisé sur une tâche particulière (au lieu du point de vue holistique de l'analyse heuristique) un évaluateur se met dans la façon de penser d'un nouveau utilisateur et complète une ou plusieures tâches décomposés états, tout en notant les questions et les difficultés que soulèverait un utilisateur débutant. Les ‘personas' sont souvent utilisés en conjonction avec des promenades cognitifs. Ce sont des utilisateurs fictifs ayant des rapports bien particuliers au numérique. L'utilisation des ‘personas' vise à assurer qu'une interface soutien bien des utilisateurs divers - en tant que styles d'apprentissage, ou même, dans le cas du projet <a href="http://gendermag.org/" target="_blank">Gendermag</a> de Margaret Burnett, de genre.</p>
+              <div class="aside">
+                <div class="aside-title">Des domaines pas si différents...</div>
+                <div class="aside-content">
+                  <p>Il vaut la peine de noter qu'il existe deux types de personas: ‘ad-hoc' et orientée données. Ce premier type sont créés avant que le processus d'évaluation commence et ont comme but l'évaluation de l'interface, pendant que le deuxième type se crée à partir des interactions des utilisateurs avec un système. Trude Heift à utiliser les personas orientée données pour comprendre le comportement des étudiants par rapport à les conseils préventifs offerts par E-tutor[1]. Ce type de persona c'est moins un modèle d'utilisateur et plus une façon de généraliser le comportement des utilisateurs afin de classer les utilisateurs en catégories.</p>
+                  <p>Efin, quand j'ai lu l'article de Heift, il m'a immédiatement fait penser au travail de Anthony Estey[2], qui enseignait, il y a quelques années, au département d'informatique à Uvic. Son travail portait sur la rétention dans des cours d'informatique introductions, notamment par l'identification tôt des étudiants à risque d'échouer. Ses expériences se sont déroulées au sein de l'outil Bitfit, qui permet aux étudiants de faire des questions de pratique.</p>
+                  <p>Malgré le fait que BitFit et E-tutor appartiennent à des domaines assez différents, les deux systèmes ont plein de similarités. Les deux incluent des exercices de plusieurs types - par exemple, la compréhension de lecture et la génération de simples productions. Encore plus important, les deux fournissent des conseilles séquentielles qui peuvent mener les étudiants à la bonne réponse, et les deux notent les interactions des étudiants avec les niveaux d'indices . L'image ci-dessous montre un exemple des indices fournis par BitFit.</p>
+                  <div class="integrated-image">
+                    <img src="./styling/img/anna/bitfit.png">
+                  </div>
+                  <p>La différence importante entre les deux études c'est que Heift a identifié ses catégories d'apprenants par la construction des ‘personas' à partir des données pendant que Estey avait commencé avec les catégories de haute risque ou non déjà établies. Malgré ces perspectives différentes, les données leur ont menés au même endroit. Heift avait fini par l'identification de deux groupes statistiquement significatifs: le groupe ‘no-help' et un groupe qui utilisait les indices parfois ou peu souvent. Ce premier groupe était désigné comme 'no-help', car les données indiquent qu'ils ont sauté directement à la réponse sans passé du temps à travailler le problème. Ce groupe c'est le groupe qui a moins bien réussi académiquement. Estey avait également conclu que les étudiants qui ont demandé tous les conseils possibles sans jamais compiler du code (ce qu'il faut faire pour même essayer de trouver la réponse) ont souvent échoué l'examen final:</p>
+                  <div class="quote hci-quote">
+                    <p>« A number of students frequently requested all of the hints on a question, but never compiled any code. This behavior was exhibited most commonly by students who ended up failing the final exam »</p>
+                  </div>
+                  <p>En lisant ces articles liées à mes deux domaines d'étude j'étais ravie de trouver tant de similarités. Pourtant, étant donné la similarité des interfaces (types de questions, aide en contexte) et les méthodes d'évaluation - les deux emploient, par exemple, un analyseur syntaxique - je n'aurais pas dû être si surprise!</p>
+                </div>
+              </div>
+              <div class="modal-container" id="gendermag-modal">
+                <div><a ng-click="openModal('/projet/views/modals/gendermag_modal.html')">En savoir plus:<br> Gendermag</a></div>
+              </div>
+              <div class="ref-section">
+                <p class="ref-item">
+                  <a href="http://hal.univ-grenoble-alpes.fr/hal-01162447/document" target="_blank">[1]</a>
+                  Mangenot, F., & Soubrié, T. (2010, June). Créer une banque de tâches Internet: quels descripteurs pour quelles utilisations?. In Tice et Didactique des Langues Étrangères et Maternelles: la tâche comme point focal de l'apprentissage.
+                </p>
+                <p class="ref-item">
+                  <a href="https://www.jstor.org/stable/pdf/calicojournal.27.3.491.pdf" target="_blank">[2]</a>
+                  Hamel, M. J., & Caws, C. (2010). Usability tests in CALL development: Pilot studies in the context of the dire autrement and francotoile projects. Calico Journal, 27(3), 491-504.
+                </p>
+                <p class="ref-item">
+                  <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.330.1188&rep=rep1&type=pdf" target="_blank">[3]</a>
+                  Jeffries, R., Miller, J. R., Wharton, C., & Uyeda, K. (1991, April). User interface evaluation in the real world: a comparison of four techniques. In Proceedings of the SIGCHI conference on Human factors in computing systems (pp. 119-124). ACM.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="post" id="ai-section">
+            <div class="post-title">Le potentiel de l'apprentissage automatique non-supervisé</div>
+            <div class="post-content">
+              <p>Il existe une distinction importante entre les corpus annotés et des corpus de données crues. Dans le contexte de l'analyse des erreurs des apprenants L2, je n'ai abordé jusqu'à maintenant que des méthodes qui identifient des thèmes d'erreurs des corpus annotés - autrement dit, des corpus qui ont été traités par un expert avant que l'analyse a commencé.</p>
+              <p>Etant donné que le temps requis pour le faire présente déjà un problème, il y a d'autres soucis avec le taggage: (1) La difficulté de la création d'un système de taggage exhaustif et cohérent; et (2) l'élément de subjectivité humaine. Granger et Guilquin[1] décrivent très bien le problème:</p>
+              <div class="quote ai-quote">
+                <p>« As for error-tagging, it makes it much easier to notice interlanguage features and often comes with possible corrections. It should, however, be borne in mind that the annotation of tagged corpora may sometimes be problematic (mistagging, inconsistencies) and that it always reflects a certain theoretical perspective that may not be shared by the teacher »</p>
+              </div>
+              <p>Donc si les données taggées nous posent des problèmes, que pourrait-on apprendre des données crues? D'apprendre des thèmes à partir des données crues, ça c'est bien la force des réseaux de neurones.</p>
+              <p>Des réseaux de neurones sont une technologie qui gagne du souffle que dans les deux dernières décennies. Ils rentrent dans la catégorie d'apprentissage non supervisé, car au lieu d'apprendre des thèmes à partir des métadonnées - où un être humain a décidé quelles caractéristiques des données sont importantes - ils décident pour eux-mêmes les caractéristiques saillants en apprenant directement des données crues.</p>
+              <p>Un réseau de neurones se compose d'une série de couches de neurones reliés. Ces états sont appelés neurones car le modèle tente d'imiter le cerveau humain. Chaque lien entre deux neurones à un ‘poids' associé. Ces poids sont accordés des valeurs aléatoires au début de l'entraînement, est le but c'est de, à fur et à mesure de l'entraînement, les raffinés afin de réduire le cout calculer par une fonction d'erreur qui évalue un résultat calculé à partir des inputs et des poids. Les inputs d'un réseau de neurones ce sont des exemples - de textes, d'images, et cetera.</p>
+              <p>On peut utiliser les réseau de neurones soit pour la catégorisation ou la génération des données. Dans ce premier cas, le output du réseau c'est une ou plusieures probabilités qui représentent la probabilité qu'un exemple appartient à une certaine catégorie. Dans le deuxième scénario, l'output c'est des données du même style des inputs, soit - il une image ou du texte. Veillez trouver un exemple de la structure d'un simple réseau ci-dessous.</p>
+              <div class="integrated-image">
+                <img src="./styling/img/anna/nn.jpeg">
+              </div>
+              <div class="modal-container" id="nn-modal">
+                <div><a ng-click="openModal('/projet/views/modals/nn_modal.html')">En savoir plus:<br> Les réseaux de neurones</a></div>
+              </div>
+              <div class="aside">
+                <div class="aside-title">Les bêtises des réseaux de neurones</div>
+                <div class="aside-content">
+                  <p>Pendant que les réseaux de neurones peuvent produire des résultats incroyables, par exemple dans le domaine de vision numérique, il faut nous rappeler que leur intelligence apparente, ce n'est toujours pas une intelligence humaine. Ils peuvent facilement acquérir des connaissances particulières du niveau des experts humains - par exemple, le modèle Imagenet qui peut distinguer entre 308 types de champignons - mais commettent toujours des erreurs très éloignées des nôtres. Avec la modification de seulement quelques pixels, ce même modèle dit toutes images des autruches. Les intelligences pensent très différemment de nous car, au fond, ils ne pensent pas.</p>
+                  <p>Mes exemples préférés des drôles de résultats que peuvent générer des réseaux de neurones viennent du <a href="http://aiweirdness.com/" target="_blank">blogue</a> de la chercheuse américaine Janelle Shane</p>
+                  <p>Une de ces expériences est une super démonstration des différences entre comment pensent les humains et les intelligences artificielles (IA). Quand on a demandé une agent IA d'apprendre comment se transporter aussi rapidement que possible, au lieu d'apprendre à courir ou d'évoluer une roue l'agent avait décidé que la meilleure solution c'était de se construire une grande jambe, tomber, et ensuite de recommencer ce processus.</p>
+                  <div class="integrated-image">
+                    <img class="oversize" src="./styling/img/anna/fall.jpg">
+                  </div>
+                  <p>Pendant qu'un grand atout des réseaux de neurones c'est l'habileté d'apprendre pour eux-mêmes les caractéristiques saillantes des inputs, cela peut parfois dire qu'ils apprennent les mauvais. Le modèle de vision numérique de Microsoft, par exemple, hallucine partout des moutons car évidemment il avait décidé que ce sont des collines vertes qui indiquent la présence des moutons, non la présence d'un animal.</p>
+                  <div class="carousel oversize">
+                       <slick class="slider carous" slides-to-show = 1 center-mode="true">
+                         <div><img class="sheep-pic" src="./styling/img/anna/sheep0.jpeg"></div>
+                         <div><img class="sheep-pic" src="./styling/img/anna/sheep1.jpg"></div>
+                         <div><img class="sheep-pic" src="./styling/img/anna/sheep2.jpg"></div>
+                       </slick>
+                  </div>
+                  <p>Shane a aussi obtenu d’étrange résultats dans le cadre de la génération du texte. Son modèle qui a été entraîné sur une collection de recettes avait créé des innovations culinaires que j'hésiterais à manger. Quelques extraits:</p>
+                  <div class="quote ai-quote">
+                    <p> « Faire brunir du saumon dans de l'huile. Y ajouter de la viande crémeuse et une autre mixture profonde »</p>
+                    <p> « Jeter les filets. Jeter la tête et la transformer en une épice qui ne colle pas. Verser quatre oeufs sur de la graisse fine et propre »</p>
+                  </div>
+                  <p>Aussi rigolo que sont ces exemples, il est aussi important que nous nous rappelons que les données que nous fournissons à ces modèles - qu'ils imitent ensuite - ce sont des données créés par nous, les êtres humains. Nous, les êtres humains, nous avons des préjugés qui peuvent être dangereux quand les algorithmes que nous croyons intrinsèquement impartiales les apprennent. Si vous voulez un exemple, que vous suggère <a href="https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing" target="_blank">cette analyse</a> qui démontre les préjugés raciaux d'un modèle qui a été utilisé dans le cadre du système de justice américaine.</p>
+                </div>
+              </div>
+              <p>Il existe un type de réseau de neurones particulier appelé réseau de neurones récurrent, qui génèrent particulièrement bien le texte en raison de leur architecture récursive. Ces modèles prédisent les probabilités de voir certains mots ou lettres -on peut faire l'analyse à un niveau plus ou moins profond- selon un contexte donné pour afin de générer les suites les plus probables.</p>
+              <div class="quote ai-quote">
+                <p>« The goal of character-level language modeling is to predict the next character in a sequence. More formally, given a training sequence (x1, . . . , xT ), the RNN uses the sequence of its output vectors (o1, . . . , oT ) to obtain a sequence of predictive distributions P(xt+1|x≤t) = softmax(ot), where the softmax distribution is defined by P(softmax(ot) = j) = exp(o (j) t )/ P k exp(o (k) t ). The language modeling objective is to maximize the total log probability of the training sequence PT −1 t=0 log P(xt+1|x≤t), which implies that the RNN learns a probability distribution over sequences »[2]</p>
+              </div>
+              <p>N’oublions pas que les réseau de neurones apprennent par imitation - ce qui est un peu étrange lorsqu'on considère qu’ils génèrent des textes plus ‘humains’ que les grammaires lorsqu'ils contredisent la théorie générativiste de Chomsky - et donc produisent des textes qui copient et exagèrent les caractéristiques des textes input. Les exemples ci-dessou, du <a href="http://karpathy.github.io/2015/05/21/rnn-effectiveness/" target="_blank">blogue</a> d’Andrej Kaparthy (Stanford) montrent comment un réseau récurrent a appris écrire dans le style de Shakespeare, et un autre dans le style de Wikipedia.</p>
+              <div class="integrated-image">
+                  <img src="./styling/img/anna/shakespeare.png">
+              </div>
+              <div class="integrated-image">
+                  <img src="./styling/img/anna/shakespeare.png">
+              </div>
+              <p>Comment tout cela est-il pertinent à l'analyse des productions des apprenants L2? Souvent le but de l'analyse des textes d' étudiant c'est souvent l'identification des thèmes d'erreurs. Sans un corpus annoté, nous ne pouvons pas faire de l'analyse numérique traditionnelle, et l'analyse à la main est longue (et aussi moins fiable en tant qu'uniformité). C'est ici où l'apprentissage automatique présente des possibilités intéressantes. Est-qu'un modèle entraîné sur un corpus de productions fautives généraliserait bien les erreurs. Il serait possible qu'un texte généré par un réseau de neurones récurrent pourrait bien résumé et exagéré les erreurs saillants sans avoir besoin de l'intervention humaine.</p>
+              <p>Évidemment, les techniques d'apprentissage automatique sont toujours en plein développement; c'est un domaine assez jeune. Pourtant, l'intégration de l'apprentissage non-supervisé dans l'analyse des textes, il y a là de la potentielle!</p>
+              <div class="ref-section">
+                <p class="ref-item">
+                  <a href="https://www.researchgate.net/publication/228984095_How_can_DDL_be_used_in_language_teaching" target="_blank">[1]</a>
+                  Gilquin, G., & Granger, S. (2010). How can data-driven learning be used in language teaching. The Routledge handbook of corpus linguistics, 359370.
+                </p>
+                <p class="ref-item">
+                  <a href="https://www.cs.utoronto.ca/~ilya/pubs/2011/LANG-RNN.pdf" target="_blank">[2]</a>
+                  Sutskever, I., Martens, J., & Hinton, G. E. (2011). Generating text with recurrent neural networks. In Proceedings of the 28th International Conference on Machine Learning (ICML-11) (pp. 1017-1024).
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="contact">
+            <span><a href="https://twitter.com/atsollazzo" target="_blank"><i class="fa fa-twitter"></i></a></span>
+            <span><a href="mailto:atsoll@uvic.ca"><i class="fa fa-envelope"></i></a></span>
+          </div>
+        </div>
       </div>
     </div>
   </body>

@@ -1,0 +1,26 @@
+<!Doctype html>
+<html >
+  <body>
+    <div class="ui-modal">
+        <div class = "modal-content">
+          <i class = "fa fa-times" ng-click = "closeModal()"></i>
+          <div class="modal-title">La question de l'approche itérative</div>
+          <div class="modal-content">
+            <p>Pour que les informaticiens ne doivent pas écrire du code à machine, mais peuvent au lieu faire de la programmation à un niveau plus abstrait, il existe des programmes qui font automatiquement la traduction entre les langages de haut niveau et les instructions compréhensibles à un ordinateur. Ils se divisent en deux catégories principales: les compilateurs et les interprètes.</p>
+            <p>Les deux utilisent, à un certain moment, l'analyse syntaxique pour identifier les erreurs de syntax mais ils le font - pour des raisons techniques - de manières différentes.</p>
+            <p>Un interprète arrête une fois qu'il rencontre une seule erreur, et indique la position où elle se trouve. Cette approche itérative nécessite que le programmeur corrige les erreurs dans l'ordre dans lequel ils apparaissent.</p>
+            <div class="integrated-image">
+              <img class="oversize" src="./styling/img/anna/interpreter.png">
+            </div>
+            <p>Les compilateurs, par contre, considèrent toujours l'entièreté du programme. L'avantage de ceci c'est que nous pouvons plus facilement voir les liens entre erreurs et corriger plusieurs en même temps, mais cette approche peut causer des problèmes quand le compilateur essaie de continuer son évaluation même après avoir trouvé des erreurs, car certains types d'erreurs peuvent tout dérailler. Par exemple, la délétion d'un seul ‘}' en java -  illustré ci-dessous - entraîne par la suite une mauvaise segmentation du code qui augmente rapidement le taux des erreurs distinct, quand, au fond, ils ont toute la même source.</p>
+            <div class="integrated-image">
+              <img class="oversize" src="./styling/img/anna/compiler.png">
+            </div>
+            <p>L'approche itérative est celle utilisée dans le cadre des correcteurs grammaticaux - notamment le BonPatron. Si j'entre la phrase ‘Mon chien est belle et gentille', le BonPatron identifie d'abord qu'il y a un problème avec ‘belle' et reconnaît seulement l'erreur avec ‘gentille' une fois que j'ai changé ‘belle' en ‘beau'.</p>
+            <p>Ayant enseigné des labos dans le cadre des cours qui utilisent des langages compilés (<a href="https://web.uvic.ca/calendar2019-01/CDs/CSC/115.html" target="_blank">CSC115</a>) et interprétés (<a href="https://web.uvic.ca/calendar2019-01/CDs/CSC/110.html" target="_blank">CSC110</a>) j'ai observé que pendant que l'approche itérative des interprètes facilite l'identification des erreurs pour les étudiants de niveau très débutant mais leur empêchait de voir leurs programmes comme unités cohérents. Une fois qu'ils avaient accueilli des compétences de base, l'approche holistique des compilateurs leur permettait de mieux comprendre le contexte de leurs erreurs et éviter de les répéter.</p>
+            <p>Il y a bien sûr des raisons techniques pour laquelle les correcteurs de grammaire utilisent l'approche itérative, mais je me demande, si on pourrait offrir une analyse plus holistique, comment cela affecterait l'apprentissage. Qu'en pensez vous?</p>
+          </div>
+        </div>
+    </div>
+  </body>
+</html>
