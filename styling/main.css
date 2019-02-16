@@ -147,13 +147,13 @@ menu {
 .sandratitre {
   font-family: 'Sarabun', sans-serif;
   font-size: 72px;font-weight: bold;
-  color: #000080;}
+  color: #574b90;}
 
 .sandrasous-titre {
   font-family: 'Sarabun', sans-serif;
   font-size: 30px;
   font-style: italic;
-  color: #939196;
+  color: #786fa6;
   margin-top: -3vh
 }
 
@@ -643,19 +643,20 @@ blockquote span{
   margin-left: 5%;
   margin-right: 10%;
   font-style:italic;
-  color: ##E8E8E8;
+  color:black;
   padding:1.2em 30px 1.2em 75px;
-  border-left:8px solid #000080 ;
+  border-left:8px solid #DA7B93;
+  border-top:8px solid #DA7B93;
   border-radius: 8px;
-  box-shadow: 10px 10px 5px grey;
+  box-shadow: 10px 10px 5px color: #ADADAD;
   line-height:1.6;
   position: relative;
-  background:#EDEDED;
+  background:#FFFFFF;
 }
 
 .sandrablockquote::before{
   font-family: 'Sarabun', sans-serif;
-  color:#000080;
+  color:#DA7B93;
   font-size:4em;
   position: absolute;
   left: 10px;
@@ -673,4 +674,32 @@ blockquote span{
 .sandrahangingindent {
   padding-left: 22px ;
   text-indent: -22px ;
+}
+
+.sandraimg {
+  border-radius: 5px;
+  border-color: #DA7B93;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.sandramodal-title {
+  font-family: 'Sarabun', sans-serif;
+  font-size: 30px;
+  color: #574b90;}
+
+.sandramodal-container {
+  font-family: 'Sarabun', sans-serif;
+  color: #574b90 !important;
+}
+
+.modal-content {
+  font-family: 'Sarabun', sans-serif;
+  width: 100%;
+  padding: 20px 20px 20px 20px;
+  box-shadow: none !important;
+  border: none !important;
+  font-size: 14px;
 }
