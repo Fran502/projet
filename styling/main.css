@@ -685,4 +685,7 @@ blockquote span{
   width: 50%;
 }
 
-.modal
+.sandramodal-title {
+font-family: 'Sarabun', sans-serif;
+font-size: 30px;font-weight: bold;
+color: #574b90;}
