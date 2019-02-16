@@ -646,6 +646,7 @@ blockquote span{
   color:black;
   padding:1.2em 30px 1.2em 75px;
   border-left:8px solid #DA7B93;
+  border-top:8px solid #DA7B93;
   border-radius: 8px;
   box-shadow: 10px 10px 5px color: #ADADAD;
   line-height:1.6;
