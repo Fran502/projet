@@ -645,7 +645,7 @@ blockquote span{
   font-style:italic;
   color:black;
   padding:1.2em 30px 1.2em 75px;
-  border-left:8px solid #83677B;
+  border-left:8px solid #DA7B93;
   border-radius: 8px;
   box-shadow: 10px 10px 5px color: #ADADAD;
   line-height:1.6;
@@ -655,7 +655,7 @@ blockquote span{
 
 .sandrablockquote::before{
   font-family: 'Sarabun', sans-serif;
-  color:#64485C;
+  color:#DA7B93;
   font-size:4em;
   position: absolute;
   left: 10px;
