@@ -694,3 +694,12 @@ blockquote span{
   font-family: 'Sarabun', sans-serif;
   color: #574b90 !important;
 }
+
+.modal-content {
+  font-family: 'Sarabun', sans-serif;
+  width: 100%;
+  padding: 20px 20px 20px 20px;
+  box-shadow: none !important;
+  border: none !important;
+  font-size: 14px;
+}
