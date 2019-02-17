@@ -157,7 +157,10 @@ menu {
   margin-top: -3vh
 }
 
-.sandramain-content { font-family: 'Sarabun', sans-serif }
+.sandramain-content {
+  font-family: 'Sarabun', sans-serif
+  font-size : 12px  
+}
 
 .pamelatitre {
   font-family: 'Abril Fatface', cursive;
