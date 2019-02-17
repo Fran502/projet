@@ -1,0 +1,16 @@
+<!Doctype html>
+<html >
+  <body>
+    <div class="ui-modal">
+        <div class = "modal-content">
+          <i class = "fa fa-times" ng-click = "closeModal()"></i>
+          <div class="sandramodal-title">Exemples</div>
+          <div class="sandramodal-content">
+            <p style="text-align:center;">
+            <h3>tâche cible</h3>
+            <h3>tâche communicative pédagogique</h3>
+            </p>
+        </div>
+    </div>
+  </body>
+</html>
