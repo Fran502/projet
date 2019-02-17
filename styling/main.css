@@ -240,6 +240,12 @@ menu {
       left: 100%;
   }
 
+  hr.style11 {
+  	height: 6px;
+  	background: url(http://ibrahimjabbari.com/english/images/hr-11.png) repeat-x 0 0;
+      border: 0;
+  }
+
   hr.style12 {
   	height: 6px;
   	background: url(http://ibrahimjabbari.com/english/images/hr-12.png) repeat-x 0 0;
@@ -697,7 +703,8 @@ blockquote span{
 
 .modal-content {
   font-family: 'Sarabun', sans-serif;
-  width: 100%;
+  width: 100%;hr
+
   padding: 20px 20px 20px 20px;
   box-shadow: none !important;
   border: none !important;
