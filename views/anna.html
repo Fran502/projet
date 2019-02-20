@@ -183,11 +183,11 @@
               </div>
               <p>Cette citation relève bien certains avantages du relâchement mais je veux aussi souligner le fait que la généralisation des erreurs lors du relâchement - par exemple, des accords en contextes variés - c’est aussi un désavantage au niveau de l’analyse d'erreurs faites par les étudiants.</p>
               <div class="aside">
-                <div class="aside-title"> Le correcteur Bon Patron et les faiblesses de l’analyse syntaxique</div>
+                <div class="aside-title"> Le correcteur BonPatron et les faiblesses de l’analyse syntaxique</div>
                 <div class="aside-content">
                   <p>Comme informaticienne, j’aime bien créer du logiciel mais c’est également amusant de faire de mon mieux de le briser!</p>
                   <p>Armé de la connaissance des faiblesses communes des analyseurs syntaxiques qu'utilisent les correcteurs de grammaire, je me suis mise à l’exploitation des <a href="http://www.baluchiterium.net/bug.php" target="_blank">bugs</a> du correcteur automatique BonPatron [3].</p>
-                  <p>Comme tout analyseurs syntaxiques, le Bonpatron est incapable de corriger des erreurs sémantiques. C’est infiniment plus difficile pour les ordinateurs de corriger le sens d’une phrase que sa structure grammaticale.Par exemple, parce qu'elle est bien formée, la phrase «La banane mange le gorille.» est dite correcte.Cela est également vrai des concordances. Les analyseurs syntaxiques ne peuvent pas comprendre (sans l'intervention humaine, comme dans le cas du Sentence Fairy) la corrélation entre les noms et les pronoms qui désignent de fait les mêmes entités. La phrase « Mon chien est gentil. Elle a de belles yeux bleus.» est donc, selon le BonPatron, sans erreurs.</p>
+                  <p>Comme tout analyseurs syntaxiques, le BonPatron est incapable de corriger des erreurs sémantiques. C’est infiniment plus difficile pour les ordinateurs de corriger le sens d’une phrase que sa structure grammaticale.Par exemple, parce qu'elle est bien formée, la phrase «La banane mange le gorille.» est dite correcte.Cela est également vrai des concordances. Les analyseurs syntaxiques ne peuvent pas comprendre (sans l'intervention humaine, comme dans le cas du Sentence Fairy) la corrélation entre les noms et les pronoms qui désignent de fait les mêmes entités. La phrase « Mon chien est gentil. Elle a de belles yeux bleus.» est donc, selon le BonPatron, sans erreurs.</p>
                   <p>Passons aux erreurs syntaxiques; les erreurs qu'on pourrait attendre qu'un analyseur syntaxique est capable d'identifier.</p>
                   <p>J’ai observé un comportement étrange quand le système rencontre un adverbe qu’il ne reconnaît pas. Face à une phrase qui emploie ‘hyper’ comme adverbe - on pourrait dire que c’est une confusion juste, car ce mot dans ce contexte est familier - le BonPatron a mal regroupé les mots et avait suggéré d’accorder ‘hyper’ avec le sujet ayant mal identifié sa catégorie grammaticale. Ce comportement vient du fait que l’analyse ne de fait pas d’une manière holistique mais de gauche à droite (de façon itérative). Selon les règles, cette structure demande un adverbe ou, plus probablement, un adjectif. Donc, dans le cas de ‘hyper’, il décide que c’est probablement un adjectif et suggère de l’accorder.</p>
                   <div class="integrated-image">
@@ -195,7 +195,7 @@
                   </div>
                   <p>Quand j'ai remplacé ‘hyper' par ‘très' tout s'est réglé, car le système reconnaît l'adverbe et donc la construction.</p>
                   <p>Cependant, cela n'est pas la fin des problèmes portants sur les adverbes. L'ajout d'un adverbe a, pour une raison ou un autre, masquer un problème de genre.</p>
-                  <p>La phrase «Mon chien est très belle» n'a généré aucune erreur pendant que le Bonpatron comprend facilement le problème avec la phrase «Mon chien est belle». Sans avoir recours à la liste des règles grammaticales j'ai, en ce moment, aucune explication de ce phénomène, mais c'est un mystère que je garde en tête!</p>
+                  <p>La phrase «Mon chien est très belle» n'a généré aucune erreur pendant que le BonPatron comprend facilement le problème avec la phrase «Mon chien est belle». Sans avoir recours à la liste des règles grammaticales j'ai, en ce moment, aucune explication de ce phénomène, mais c'est un mystère que je garde en tête!</p>
                 </div>
               </div>
               <div class="modal-container" id="iterative-modal">

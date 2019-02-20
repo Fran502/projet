@@ -45,8 +45,6 @@ app.controller('ctrl', function($scope, $window, $uibModal, $location) {
     $scope.model.navVisible = false;
   }
 
-
-
   $scope.openModal = function(url) {
     $scope.model.modalInstance = $uibModal.open({
        templateUrl: url,
