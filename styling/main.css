@@ -422,7 +422,8 @@ blockquote span{
 .post-title{
   font-size: 40px;
   font-weight: bold;
-  margin-top: 4vh;
+  margin-top: -2vh;
+  padding-top: 90px;
   margin-bottom: 2vh;
   color: #0a1a33;
 }
