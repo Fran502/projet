@@ -710,3 +710,25 @@ blockquote span{
 .sandramodal-content {
   font-family: 'Sarabun', sans-serif;
 }
+
+.prof-img {
+  width: 10em;
+  height: auto;
+  border-radius: 50%;
+}
+
+.prof {
+  display: inline-block;
+  margin-bottom: 3vh;
+  margin-left: 4%;
+}
+
+.profiles {
+  margin:auto;
+  margin-top: 10%;
+}
+
+#group2 {
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
