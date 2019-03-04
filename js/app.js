@@ -3,28 +3,28 @@ var app = angular.module('fran502', ['ngAnimate', 'ngRoute', 'ui.bootstrap',  's
 app.config(function($routeProvider) {
     $routeProvider
     .when("/", {
-        templateUrl : "../views/acceuil.html"
+        templateUrl : "/projet/views/acceuil.html"
     })
     .when("/Catherine", {
-        templateUrl : "../views/catherine.html"
+        templateUrl : "/projet/views/catherine.html"
     })
     .when("/Rachel", {
-        templateUrl : "../views/rachel.html"
+        templateUrl : "/projet/views/rachel.html"
     })
     .when("/Sandra", {
-        templateUrl : "../views/sandra.html"
+        templateUrl : "/projet/views/sandra.html"
     })
     .when("/Ryleigh", {
-        templateUrl : "../views/ryleigh.html"
+        templateUrl : "/projet/views/ryleigh.html"
     })
     .when("/Pamela", {
-        templateUrl : "../views/pamela.html"
+        templateUrl : "/projet/views/pamela.html"
     })
     .when("/Francesca", {
-        templateUrl : "../views/francesca.html"
+        templateUrl : "/projet/views/francesca.html"
     })
     .when("/Anna", {
-        templateUrl : "../views/anna.html"
+        templateUrl : "/projet/views/anna.html"
     })
 
 });
