@@ -24,7 +24,7 @@ body {
 
 
 .menu-toggle {
- font-size: 35px;
+ font-size: 35px !important;
  z-index: 1000;
  position: relative;
  margin-top: 5px;
@@ -157,7 +157,11 @@ menu {
   margin-top: -3vh
 }
 
-.sandramain-content { font-family: 'Sarabun', sans-serif }
+.sandramain-content {
+  font-family: 'Sarabun', sans-serif ;
+  font-size : 18px;
+  color: black ;
+}
 
 .pamelatitre {
   font-family: 'Abril Fatface', cursive;
@@ -238,6 +242,12 @@ menu {
       content: "\f10e";
       margin-left: 13px;
       left: 100%;
+  }
+
+  hr.style11 {
+  	height: 6px;
+  	background: url(http://ibrahimjabbari.com/english/images/hr-11.png) repeat-x 0 0;
+      border: 0;
   }
 
   hr.style12 {
@@ -348,7 +358,8 @@ blockquote span{
   top: 20px;
   overflow: hidden;
   z-index: 10;
-  left: 27%;
+  left: 50%;
+  margin-left: -300px;
 }
 
 
@@ -411,7 +422,8 @@ blockquote span{
 .post-title{
   font-size: 40px;
   font-weight: bold;
-  margin-top: 4vh;
+  margin-top: -2vh;
+  padding-top: 90px;
   margin-bottom: 2vh;
   color: #0a1a33;
 }
@@ -531,21 +543,21 @@ blockquote span{
   background-color: rgba(8, 209, 205, 0.7);
   position:absolute;
   left: -145px;
-  top: 2200vh;
+  top: 2260vh;
 }
 
 #nn-modal {
   background-color: rgba(155, 65, 173, 0.7);
   position:absolute;
   right: -145px;
-  top: 2700vh;
+  top: 2790vh;
 }
 
 #iterative-modal {
   background-color: rgba(209, 50, 81, 0.7);
   position:absolute;
   right: -145px;
-  top: 1700vh;
+  top: 1800vh;
 }
 
 
@@ -585,7 +597,7 @@ blockquote span{
 
 .quote {
   border-left: 5px solid;
-  margin-top: 10%;
+  margin-top: 4%;
   font-style: italic;
   color: #0a1a33;
   font-size: 16px;
@@ -674,4 +686,49 @@ blockquote span{
 .sandrahangingindent {
   padding-left: 22px ;
   text-indent: -22px ;
+}
+
+.sandraimg {
+  border-radius: 5px;
+  border-color: #DA7B93;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.sandramodal-title {
+  font-family: 'Sarabun', sans-serif;
+  font-size: 30px;
+  color: #574b90;}
+
+.sandramodal-container {
+  font-family: 'Sarabun', sans-serif;
+  color: #574b90 !important;
+}
+
+.sandramodal-content {
+  font-family: 'Sarabun', sans-serif;
+}
+
+.prof-img {
+  width: 15vw;
+  height: auto;
+  border-radius: 50%;
+}
+
+.prof {
+  display: inline-block;
+  margin-bottom: 3vh;
+  margin-left: 4%;
+}
+
+.profiles {
+  margin:auto;
+  margin-top: 10%;
+}
+
+#group2 {
+  margin-top: 5%;
+  margin-bottom: 10%;
 }
